@@ -2,7 +2,11 @@ from typing import Union
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-app = FastAPI(title="My FastAPI Application")
+app = FastAPI(
+    title="My FastAPI Application",
+    description="A simple API with GET and PUT endpoints for managing items",
+    version="1.0.0"
+)
 
 class Item(BaseModel):
     name: str
